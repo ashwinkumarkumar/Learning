@@ -1,0 +1,26 @@
+import cv2
+import numpy as np
+
+# Load the image
+img = cv2.imread('pythonLearning/CyberSecurityLab/shivaji.jpeg')
+
+# Check if the image is loaded correctly
+if img is None:
+    print("Error: Unable to load image")
+else:
+    # Convert to grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Apply MSB (extract 2 most significant bits)
+    msb = (gray >> 6) & 3
+
+    # Enhance the image (increase contrast)
+    enhanced = (msb * 85).astype(np.uint8)  # Convert to uint8 and scale
+
+    # Convert back to color (optional)
+    enhanced_color = cv2.cvtColor(enhanced, cv2.COLOR_GRAY2BGR)
+
+    # Display the enhanced image
+    cv2.imshow('Enhanced Image', enhanced_color)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()

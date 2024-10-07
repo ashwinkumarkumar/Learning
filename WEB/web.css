@@ -1,0 +1,52 @@
+.head{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:inherit;
+    font-size:200%;
+    align-content: center;
+    text-align: center;
+    margin: 30,auto;
+    border-radius: 5px;
+    border: 3px solid #342e2e;
+
+
+}
+body{
+    background-color:azure;
+    
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.question{
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.input{
+    width: 50%;
+}
+
+ul{
+    text-align: left;
+}
+input{
+    text-align: right;
+}
+
+.paragraph-input{
+    text-align: center;
+    align-content: center;
+    
+}

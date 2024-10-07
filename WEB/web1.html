@@ -1,0 +1,18 @@
+<form onsubmit="handleSubmission(this); return false;">
+    <label for="user-input">What is your name?</label>
+    <input type="text" id="user-input" name="username" placeholder="e.g. John Doe">
+    <input type="submit" value="Enter">
+  </form>
+  
+  <script>
+    function handleSubmission(form) {
+      // Get the input value
+      var inputValue = form.username.value;
+      
+      // Do something with the input value, e.g. alert it
+      alert("You entered: " + inputValue);
+      
+      // Prevent the form from submitting to a server
+      return false;
+    }
+  </script>
